@@ -2,5 +2,121 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    background-color: black;
+    color: white;
 }
 
+.title {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 20vh 0 10vh 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+hr {
+    width: 35vw;
+    min-width: 400px;
+    max-width: 430px;
+    padding: 0;
+    margin: auto;
+}
+
+.title h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 5rem; 
+    /* Use 4 rem for smaller screens */
+    text-shadow: 1px 1px 2px white;
+}
+
+.options {
+    /* border: 10px 0px 10px 0; */
+    padding: 10px;
+    display: flex;
+    width: 40%;
+    max-width: 200px;
+    margin: auto;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border-top: 5px solid rgba(255, 255, 255, 0.242);
+    border-bottom: 5px solid rgba(255, 255, 255, 0.242);
+    list-style: none;
+}
+
+.options li{
+    opacity: .8;
+    margin: 5px;
+}
+
+.options li:hover {
+    opacity: 1;
+    list-style: inside;
+    list-style-image: url('svgs/hand.svg');
+    text-shadow: 1px 1px 2px white;
+    translate: -12px 0;
+}
+
+.mainMenu hr {
+    width: 20%;
+    position: absolute;
+}
+
+.bgImage img, .bgBorder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.bgImage img{
+    width: 95%;
+    height: 95%;
+    /* aspect-ratio: 16/9; */
+    z-index: -1;
+    opacity: .7;
+    object-fit: cover;
+    transition: opacity 1s ease;
+}
+
+.bgBorder {
+    background: radial-gradient(ellipse, transparent, black 77%);
+    content: "";
+    /* background-color: white; */
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.footer {
+    position: absolute;
+    width: 80%;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.footer h2, .footer h3 {
+    text-align: center;
+    color: white;
+}
+
+.footer h2 {
+    font-size: 1rem;
+}
+
+.footer h3 {
+    font-size: 0.75rem;
+}
