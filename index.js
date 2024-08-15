@@ -20,3 +20,16 @@ function imageSwap() {
     num++;
     menuImage.style.opacity = "1";
 }
+
+// const options = document.querySelector('.options');
+const options = document.querySelectorAll('.menuOptions');
+const hoverAudio = new Audio('sfx/menuHover.wav');
+const menuSelect = new Audio('sfx/menuSelect.wav');
+
+options.forEach(option => {
+    option.addEventListener("mouseover", (event) => {
+        hoverAudio.play();
+    })
+});
+
+// console.log(options);

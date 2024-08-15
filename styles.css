@@ -125,3 +125,14 @@ hr {
 span {
     font-size: 0.5rem;
 }
+
+audio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px 0 0 20px;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: white;
+}
