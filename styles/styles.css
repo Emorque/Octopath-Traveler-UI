@@ -62,7 +62,7 @@ hr {
 .options li:hover {
     opacity: 1;
     list-style: inside;
-    list-style-image: url('svgs/hand.svg');
+    list-style-image: url('/svgs/hand.svg');
     text-shadow: 1px 1px 2px white;
     translate: -12px 0;
 }
