@@ -1,6 +1,15 @@
 :root {
     --OTgrey: #434342;
     --OTwhite: #c3c3c2;
+
+    --OTblackT: #1b1b1bd3;
+    --OTwhiteT: #ffffff44;
+
+    --OTgreen: #156816;
+    --OTblue: #025584;
+    --OTgrey: #79787d;
+
+    --OTbeige: #e4d5b7;
 }
 
 body {
@@ -138,6 +147,44 @@ hr {
     .hand {
         display: inline;
     }
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    border-top: 3px solid var(--OTwhiteT);
+    width: 100%;
+    z-index: 2;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--OTblack);
+}
+
+.footer h4 {
+    padding: 10px 0 10px 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.button .circle {
+    background-color: var(--OTbeige) ;
+    border-radius: 90%;
+    padding: 5px 8px 5px 8px;
+    color: black;
+}
+
+a {
+    text-decoration: none;
 }
 
 
