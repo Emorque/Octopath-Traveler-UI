@@ -70,7 +70,7 @@ body {
 
 .toggle {
     position: absolute;
-    transform: translateX(-108px);
+    transform: translateX(-109px);
 }
 
 .gear {
@@ -78,7 +78,7 @@ body {
     height: 30px;
     padding: 10px;
     border: 1px solid var(--OTwhiteT);
-    border-right: 2px solid var(--OTblack);
+    border-right: 4px solid var(--OTblack);
     z-index: 2;
 }
 
