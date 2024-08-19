@@ -12,17 +12,22 @@
     --OTbeige: #e4d5b7;
 }
 
-
-body {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    background-color: var(--OTblack);
+* {
+    margin: 0;
+    padding: 0;
 }
 
-* {
-    padding: 0;
-    margin: 0;
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--OTblack);
+    font-size: 16px; /*1 rem = 16px */
+}
+
+body {
+    width: 100%;
+    height: 100%;
 }
 
 .background img {
@@ -31,13 +36,38 @@ body {
     left: 50%;
     transform: translate(-50%, -50%); /*maybe ad a media query to shift this up on larger screens */
     width: 100%;
-    /* max-width: 1200px; */
     height: 100%;
-    /* aspect-ratio: 16/9; */
     z-index: -1;
     opacity: 1;
     object-fit: cover;
     filter: blur(1px);
+}
+
+.title h1{
+    font-size: 1.5rem;
+}
+
+.option h1, .metric h1 {
+    font-size: 1.25rem;
+}
+
+.info h2, .info h1{
+    font-size: 1rem;
+}
+
+.icon h3 {
+    font-size: 0.8rem;
+    padding: 0 0 0 1px;
+}
+
+.numbers h1 {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.subNumber {
+    font-size: 1rem;
+    letter-spacing: 1px;
 }
 
 .tavern {
@@ -45,11 +75,27 @@ body {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;   
-    /* background: linear-gradient(90deg, var(--OTtransparent), transparent, var(--OTtransparent)); */
 }
 
+
+.leftSide {
+    width: 50%; /*may need to change with smaller screens*/
+}
+
+
 .title, .option {
-    padding: 5px 0px 5px 30px;
+    padding-left: 30px
+}
+
+.option{
+    letter-spacing: -1px;
+    
+}
+
+.title {
+    padding-top: 1rem;
+    border-bottom: 3px solid var(--OTwhiteT);
+    background: linear-gradient(90deg, var(--OTblackT), transparent 80%);
 }
 
 .optionsList {
@@ -57,20 +103,14 @@ body {
     flex-direction: column;
     gap: 30px;
     width: 100%;
+    padding-top: 4rem;
 }
 
-.title {
-    border-bottom: 3px solid var(--OTwhiteT);
-    margin: 10px 0 0 0;
-    width: 70%;
-    background: linear-gradient(90deg, var(--OTblackT), transparent 80%);
-}
 
 .optionContainer {
     display: flex;
     flex-direction: row;
     max-width: 300px;
-    min-width: 100px;
     opacity: 0.8;
 }
 
@@ -85,19 +125,6 @@ body {
     background-color: var(--OTblackT);
 }
 
-h1 {
-    font-size: 1.2rem;
-}
-
-.option h1 {
-    margin: auto 0;
-    width: 100%;
-}
-
-.title h1 {
-    font-size: 1.6rem;
-}
-
 .title h1, .option h1, .metric h1, 
 .info h2, .info h1, .numbers h1,
 .metric h1 {
@@ -108,53 +135,51 @@ h1 {
     color: var(--OTgrey);
 }
 
-.footer h4 {
-    color: var(--OTbeige);
-}
-
-
 .triangle {
     border-top: 20px solid transparent;
     border-left: 20px solid var(--OTblackT);
     border-bottom: 20px solid transparent; 
 }
 
+
+
 .rightSide {
     display: flex;
     flex-direction: column;
     gap: 30px;
     width: 50%;
-    max-width: 350px;
     margin: 0 0 0 auto;
-    padding: 5px 30px 5px 0px;
     border-left: 3px solid var(--OTwhiteT);
     background-color: var(--OTtransparent);
 }
 
-.leftSide {
-    width: 50%;
+.metric img {
+    height: 20px;
+    width: 20px;
 }
 
 .metrics {
-    margin: 0 0 0 auto;
+    width: 70%;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 5px 0 0 0;
-    max-width: 200px;
+    margin: 0 auto;
 }
 
 .metric {
     display: flex;
-    padding: 5px 0px 5px 30px;
+    /* padding: 5px 0px 5px 30px; */
+    /* padding: 5px 0 5px 0; */
     gap: 50px;
     justify-content: space-between;
+    letter-spacing: 1px;
 }
 
 .characterContainer {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 0 2rem 0 0 ;
 }
 
 .character {
@@ -187,6 +212,11 @@ h1 {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+}
+
+.icon img {
+    height: 1rem;
+    width: 1rem;
 }
 
 .stat {
@@ -222,8 +252,10 @@ h1 {
     }
 }
 
+
 .footer {
-    position: absolute;
+    display: flex;
+    position: fixed;
     bottom: 0;
     display: flex;
     border-top: 3px solid var(--OTwhiteT);
@@ -236,6 +268,19 @@ h1 {
 
 .footer h4 {
     padding: 10px 0 10px 10px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.button .circle {
+    background-color: var(--OTbeige) ;
+    border-radius: 50%;
+    padding: 5px 8px 5px 8px;
+    color: var(--OTblack);
 }
 
 .buttons {
@@ -256,60 +301,97 @@ h1 {
     color: black;
 }
 
-a {
-    text-decoration: none;
+.footer a {
+    padding: 10px 0 10px 0;
+    font-size: 1rem;
+    color: var(--OTwhite)
 }
 
-@media (max-width: 700px){    
-    h1 {
-        font-size: 0.9rem;
-    }
-    .title h1 {
-        font-size: 1rem;
-    }
+.footer h4 {
+    color: var(--OTbeige);
+}
 
-    h2 {
-        font-size: 0.8rem;
-    }
+a {
+    text-decoration: none;
+    color: var(--OTwhite);
+}
 
-    h3, .numbers h1 {
-        font-size: 0.8rem;
-    }
 
-    .rightSide {
-        width: 80%;
-        padding-right: 10px;
-    }
-
-    .title, .option {
-        padding: 5px 0px 5px 10px;
-    }    
-
-    .character{
-        width: 100%;
-    }
-
-    .sprite {
-        width: 70px;
-        height: 70px;
+@media only screen and (max-width: 1000px){
+    .title h1{
+        font-size: 1.5rem;
     }
     
-    .characterLine {
-        height: 5px;
+    .option h1, .metric h1 {
+        font-size: 1rem;
+    }
+    
+    .info h2, .info h1{
+        font-size: 1rem;
+    }
+    
+    .icon h3 {
+        font-size: 0.7rem;
+    }
+    
+    .numbers h1 {
+        font-size: 1rem;
+    }
+    
+    .subNumber {
+        font-size: 0.9rem;
     }
 
+    .icon img {
+        height: 0.8rem;
+        width: 0.8rem;
+    }
     .bar {
         height: 5px;
     }
-
-    .icon img{
-        width: 10px;
-        height: 10px;
+    .characterContainer {
+        padding: 0 1rem 0 0 ;
     }
 }
 
-@media (min-width: 1800px){
-    .background img {
-        width: 70%;;
+@media only screen and (max-width: 1000px){
+    .rightSide {
+        width: 60%;
+    }
+    .leftSide {
+        width: 50%;
     }
 }
+
+@media only screen and (max-width: 650px){
+    .rightSide {
+        width: 80%;
+    }
+    .leftSide {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 550px){
+    .rightSide {
+        width: 95%;
+    }
+    .leftSide {
+        width: 75%;
+    }
+}
+
+
+
+@media only screen and (max-width: 400px){
+    .rightSide {
+        width: 100%;
+    }
+    .leftSide {
+        width: 90%;
+    }
+}
+/* 
+* {
+    outline: 1px solid #f00 !important;
+  } */
