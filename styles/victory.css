@@ -74,6 +74,12 @@ h4 {
     margin: auto 0;
 }
 
+.setRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .bonus h2 {
     position: relative;
     font-size: 1.5rem;
@@ -422,6 +428,99 @@ a {
     content: "";
 } */
 
+.replay {
+    display: block;
+    position: absolute;
+    right:0;
+    top: 0;
+    transform: translate(-100%, 100%);
+    cursor: pointer;
+    background-color: var(--OTbeige);
+    padding: 0.4rem;
+}
+
+.replayTriangle {
+    border-top: 10px solid transparent;
+    border-left: 10px solid var(--OTblack);
+    border-bottom: 10px solid transparent;
+}
+
+.replayTriangle.show {
+    border-top: 10px solid var(--OTblack);
+    border-left: 10px solid var(--OTblack);
+    border-bottom: 10px solid var(--OTblack);
+}
+
+
+/* Animation */
+.leftSide {
+    /* display: none; */
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.leftSide.show {
+    /* display: block; */
+    opacity: 1;
+    transform: translateX(0px);
+    animation: fade-in 1s;
+}
+
+@keyframes fade-in {
+    0% {
+        /* display: none; */
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        /* display: block; */
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.victoryText {
+    opacity: 0;
+}
+
+.victoryText.show {
+    opacity: 1;
+    animation: appear 1s;
+}
+
+.itemsContainer {
+    opacity: 0;
+}
+
+.itemsContainer.show {
+    opacity: 1;
+    animation: appear 0.5s;
+}
+
+
+.victoryContainer {
+    opacity: 0;
+}
+
+.victoryContainer.show{
+    opacity: 1;
+    animation: appear 0.5s;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.h3Small {
+    /* position: relative; */
+    transform: translateY(1px);
+}
+
 @media only screen and (max-width: 800px){
     .victoryText {
         transform: translate(30px, -40px);
@@ -477,6 +576,10 @@ a {
     
     .domination {
         width: calc(1.3rem * 4);
+    }
+    .h3Small {
+        /* position: relative; */
+        transform: translateY(0px);
     }
 }
 
@@ -681,7 +784,7 @@ a {
 
 
 
-/* 
-* {
+
+/* * {
     outline: 1px solid #f00 !important;
   } */

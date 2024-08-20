@@ -11,6 +11,9 @@
     <body>
         <div class="background">
             <img src="img/victory.png">
+            <div class="replay">
+                <div class="replayTriangle"></div>
+            </div>
         </div>
         <div class="victoryContainer">
             <div class="victoryText">
@@ -41,7 +44,7 @@
                         </div>
                         <div class="stat">
                             <h3>EXP</h3>
-                            <h2>20 <span class="blueTxt">+2</span></h2>
+                            <h2 class="expGain" data-value="22">20 <span class="blueTxt">+2</span></h2>
                             <div>
                                 <div class="bonus">
                                     <h2>Break</h2>
@@ -90,10 +93,10 @@
                         <div class="exp">
                             <h4>EXP</h4>
                             <div class="setRight">
-                                <h3>526<span class="h3Small">/1,096</span></h3>
+                                <h3 class="characterEXP" data-value="526">526</h3><span class="h3Small">/1,096</span>
                             </div>
                         </div>
-                        <div id="character1" class="expBar"></div>
+                        <div id="character1" data-value= "48" class="expBar"></div>
                         <div class="jp">
                             <h4>JP</h4>
                             <div class="setRight">
@@ -119,10 +122,10 @@
                         <div class="exp">
                             <h4>EXP</h4>
                             <div class="setRight">
-                                <h3>528<span class="h3Small">/1,098</span></h3>
+                                <h3 class="characterEXP" data-value="528">528</h3><span class="h3Small">/1,098</span>
                             </div>
                         </div>
-                        <div id="character2" class="expBar"></div>
+                        <div id="character2" data-value= "46" class="expBar"></div>
                         <div class="jp">
                             <h4>JP</h4>
                             <div class="setRight">
@@ -148,10 +151,10 @@
                         <div class="exp">
                             <h4>EXP</h4>
                             <div class="setRight">
-                                <h3>411<span class="h3Small">/1,096</span></h3>
+                                <h3 class="characterEXP" data-value="411">411</h3><span class="h3Small">/1,096</span>
                             </div>
                         </div>
-                        <div id="character3" class="expBar"></div>
+                        <div id="character3" data-value= "40" class="expBar"></div>
                         <div class="jp">
                             <h4>JP</h4>
                             <div class="setRight">
@@ -177,10 +180,10 @@
                         <div class="exp">
                             <h4>EXP</h4>
                             <div class="setRight">
-                                <h3>63<span class="h3Small">/1,096</span></h3>
+                                <h3 class="characterEXP" data-value="63">63</h3><span class="h3Small">/1,096</span>
                             </div>
                         </div>
-                        <div id="character4" class="expBar"></div>
+                        <div id="character4" data-value= "7" class="expBar"></div>
                         <div class="jp">
                             <h4>JP</h4>
                             <div class="setRight">
@@ -209,5 +212,7 @@
                 </div>
             </a>
         </footer>    
+
+        <script src="./js/victory.js"></script>
     </body>
 </html>

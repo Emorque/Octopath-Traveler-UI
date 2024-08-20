@@ -407,7 +407,7 @@ a {
     position: absolute;
     /* background-color: #000; */
     height: 10px;
-    bottom: -30%;
+    bottom: -25%;
     left: 50%;
     transform: translate(-50%,50%);
     content:"";
@@ -432,6 +432,23 @@ left: 5%; */
     border-radius: 10%;
 }
 
+@media only screen and (min-width: 1500px){
+    .menu {
+        transform: translate(20%,-170%); 
+    }
+}
+
+@media only screen and (min-width: 1700px){
+    .menu {
+        transform: translate(40%,-190%); 
+    }
+}
+
+@media only screen and (min-width: 2400px){
+    .menu {
+        transform: translate(65%,-190%); 
+    }
+}
 
 @media only screen and (max-width: 1000px){
     .title h1{
