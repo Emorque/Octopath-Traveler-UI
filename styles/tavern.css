@@ -40,7 +40,8 @@ body {
     z-index: -1;
     opacity: 1;
     object-fit: cover;
-    filter: blur(1px);
+    /* filter: blur(0px); */
+    animation: all 1s ease;
 }
 
 .title h1{
@@ -255,7 +256,7 @@ body {
 
 .footer {
     display: flex;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     display: flex;
     border-top: 3px solid var(--OTwhiteT);
@@ -314,6 +315,121 @@ body {
 a {
     text-decoration: none;
     color: var(--OTwhite);
+}
+
+/* Animation */
+
+/* .leftSide.hidden {
+    transform: translateX(-50px);
+    animation: fade-out 0.1s ease-out forwards;
+    display: none;
+}
+
+.leftSide.show {
+    display: block;
+    animation: fade-in 0.1s ease-in;
+}
+
+.rightSide.hidden {
+    transform: translateX(50px);
+    display: none;
+    animation: fade-out 1s ease-out;
+}
+
+.rightSide.show {
+    display: flex;
+    animation: fade-in 0.1s ease-in;
+} */
+
+.side {
+    display: none;
+}
+
+.leftSide.show {
+    display: block;
+    animation: fade-in 0.1s;
+}
+
+.rightSide.show {
+    display: flex;
+    animation: fade-in 0.1s;
+}
+
+/* .leftSide.hidden {
+    animation: fade-out 1s ease-out;
+} */
+
+
+
+@keyframes fade-in { 
+    0% {
+        display: none;
+        opacity: 0;
+        width: 0%;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* @keyframes fade-out { 
+    0% {
+        opacity: 1;
+        width: 100%;
+    }
+    100% {
+        opacity: 0;
+    }
+} */
+
+.background img {
+    /* filter: blur(1px); */
+}
+
+/* .show {
+    opacity: 1;
+    transform: translateX(0px);
+} */
+
+.menu {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(10%,-170%); /*maybe ad a media query to shift this up on larger screens */
+    z-index: 1;
+    opacity: 1;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.menu::after {
+    /* width: 60%; */
+    position: absolute;
+    /* background-color: #000; */
+    height: 10px;
+    bottom: -30%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    content:"";
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-top: 10px solid var(--OTbeige); 
+}
+
+/* position: absolute;
+content: "";
+background-color: var(--OTgrey);
+height: 5px;
+width: 95%;
+bottom: 5%;
+left: 5%; */
+
+
+.menu h1 {
+    background-color: var(--OTbeige);
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 10%;
 }
 
 
@@ -385,7 +501,7 @@ a {
 
 @media only screen and (max-width: 400px){
     .rightSide {
-        width: 100%;
+        width: 95%;
     }
     .leftSide {
         width: 90%;
