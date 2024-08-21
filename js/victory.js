@@ -3,6 +3,8 @@ const buttonIcon = document.querySelector('.replayTriangle');
 const expBars = document.querySelectorAll('.expBar');
 const totalExp = document.querySelector('.expGain');
 
+const shineBars = document.querySelectorAll('.shine');
+
 const characterEXPs = document.querySelectorAll('.characterEXP');
 
 const gain = parseInt(totalExp.dataset.value);
@@ -42,7 +44,7 @@ button.addEventListener('click', (event) => {
             expNum += 1;
             character.innerHTML = String(expNum);
         }, timeInterval/2);
-    })
+    });
 
     setTimeout(function() {showItems();}, timeInterval * gain/1.5);
 })
@@ -63,12 +65,19 @@ function showVictory() {
         victoryText.classList.remove('show');
         stats.classList.remove('show');
         victoryContainer.classList.remove('show');
+        shineBars.forEach(shine => {
+            shine.classList.remove('show');
+        });
     }
     else {
         buttonIcon.classList.add('show');
         victoryText.classList.add('show');
         stats.classList.add('show');
         victoryContainer.classList.add('show');
+
+        shineBars.forEach(shine => {
+            shine.classList.add('show');
+        });
     }
 }
 
