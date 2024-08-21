@@ -228,10 +228,7 @@ h4 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    /* width:90%; */
-    /* margin: auto; */
     gap: 2.5rem;
-    /* grid-column: 1; */
     margin: 1vh calc(1vw + 10px) 0 calc(1vw + 10px);
 }
 
@@ -282,11 +279,7 @@ h4 {
 }
 
 .expBar {
-    /* content: ""; */
-    /* width: 1 */
-    /* margin: 0 10px 0 10px; */
     height: 8px;
-    /* background-color: red, blue; */
 }
 
 #character1 {
@@ -307,22 +300,11 @@ h4 {
 
 .jp {
     display: flex;
-    /* width: 90%; */
-    /* margin: auto; */
-    /* margin: 5px 20px 0 20px; */
 }
-/* 
-.jp:before {
-    position: absolute;
-    content: "";
-    height: 1rem;
-    width: 10%;
-    background-color: blue;
-} */
+
 
 .characterLine {
-    /* width: 90%; */
-    /* margin: auto; */
+
     height: 1px;
     background-color: var(--OTwhiteText);
 }
@@ -607,6 +589,12 @@ a {
     }
 }
 
+@media only screen and (max-width: 720px){
+    .characterName h4{
+        letter-spacing: 0.5px;
+    }
+}
+
 @media only screen and (max-width: 550px){
     .victoryContainer {
         z-index: 2;
@@ -630,6 +618,11 @@ a {
 
     .itemsLine {
         width: 99%;
+    }
+
+    .characterName h4{
+        font-size: 0.8rem;
+        letter-spacing: 0px;
     }
 
     @keyframes shining {

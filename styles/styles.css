@@ -32,34 +32,59 @@ a {
     font-size: 1.5rem;
 }
 
-hr {
-    width: 35vw;
-    min-width: 300px;
-    max-width: 430px;
-    padding: 0;
-    margin: auto;
-}
-
 .title h1 {
+    position: relative;
     padding: 0;
     margin: 0;
     font-size: 5rem; 
     text-shadow: 1px 1px 2px white;
 }
 
+.title h1::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    content: "";
+    height: 0.1rem;
+    background-color: white;
+}
+
 .options {
+    position: relative;
     padding: 10px;
     display: flex;
     width: 40%;
-    max-width: 200px;
+    max-width: 170px;
     margin: auto;
     flex-direction: column;
     gap: 10px;
     justify-content: center;
     align-items: center;
-    border-top: 5px solid rgba(255, 255, 255, 0.242);
-    border-bottom: 5px solid rgba(255, 255, 255, 0.242);
     list-style: none;
+}
+
+.options::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    content: "";
+    height: 0.1rem;
+    background-color: rgba(255, 255, 255, 0.521);
+}
+
+.options::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    content: "";
+    height: 0.1rem;
+    background-color: rgba(255, 255, 255, 0.521);
 }
 
 .options li{
@@ -73,11 +98,6 @@ hr {
     list-style-image: url('../svgs/hand.svg');
     text-shadow: 1px 1px 2px white;
     translate: -12px 0;
-}
-
-.mainMenu hr {
-    width: 20%;
-    position: absolute;
 }
 
 .bgImage img, .bgBorder {
@@ -137,3 +157,30 @@ span {
         font-size: 3rem; 
     }
 }
+
+@media only screen and (max-height: 450px) {
+    .title {
+        padding: 8vh 0 6vh 0;
+    }
+
+    .title h1 {
+        font-size: 2.5rem; 
+    }
+
+    a {
+        font-size: 1rem;
+    }
+
+    .footer h2 {
+        font-size: 0.9rem;
+    }
+
+    .footer h3 {
+        font-size: 0.7rem;
+    }
+}
+
+/* 
+* {
+    outline: 1px solid #f00 !important;
+  } */
