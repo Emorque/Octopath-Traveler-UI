@@ -405,6 +405,7 @@ a {
     cursor: pointer;
     background-color: var(--OTbeige);
     padding: 0.4rem;
+    z-index: 4;
 }
 
 .replayTriangle {
@@ -583,6 +584,7 @@ a {
     .domination {
         width: calc(1.3rem * 4);
     }
+
     .h3Small {
         /* position: relative; */
         transform: translateY(0px);
@@ -643,6 +645,101 @@ a {
         }
     }
 }
+
+
+@media only screen and (max-height: 530px){
+    .victoryContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+    }
+    .victoryText {
+        transform: translate(30px, -40px);
+    }
+    
+    .victoryText h1 {
+        font-size: 3rem;
+    }
+    
+    h2 {
+        font-size: 0.8rem;
+    }
+    
+    h2 span {
+        font-size: 0.7rem;
+    }
+
+    .bonusTxt {
+        font-size: 1rem;
+    }
+    
+    .stat h3, .setRight h3 {
+        font-size: 0.7rem;
+    }
+
+    .setRight h4 {
+        padding-left: 10px;
+    }
+
+    .bonus h2 {
+        font-size: 1rem;
+    }
+        
+    .exp h4, .jp h4 {
+        font-size: .6rem;
+    }
+
+    .h3Small, .jp h3  {
+        font-size: 0.7rem;
+    }
+
+    .characterName h4 {
+        font-size: 0.7rem;
+    }
+
+    .setRight h4 {
+        font-size: 0.8rem;
+    }
+
+    
+    .leftSide {
+        display: flex;
+    }
+
+    .characters {
+        gap: 0.7rem;
+    }
+
+    .untouched {
+        width: calc(1.3rem * 2); 
+    }
+    
+    .break {
+        width: 1rem; 
+    }
+    
+    .domination {
+        width: calc(1.3rem * 2);
+    }
+
+    .triangle {
+        border-top: 10px solid transparent;
+        border-right: 10px solid var(--OTwhiteT);
+        border-bottom: 10px solid transparent; 
+    }
+
+    .itemsContainer {
+        padding: 5vh 0 0 0;
+        transform: translateX(-2rem);
+    }
+    .itemsContainer h2 {
+        padding: 0 0 1rem 0;
+    }
+    .shine {
+        left:0%;
+    }
+}
+
+
 /* * {
     outline: 1px solid #f00 !important;
   } */
