@@ -549,6 +549,33 @@ a {
         border-left: 10px solid var(--OTblackT);
         border-bottom: 10px solid transparent; 
     }
+
+    .title h1{
+        font-size: 1rem;
+    }
+    
+    .option h1, .metric h1 {
+        font-size: 0.8rem;
+    }
+    
+    .info h2, .info h1{
+        font-size: 0.8rem;
+    }
+    
+    .icon h3 {
+        font-size: 0.5rem;
+    }
+    
+    .numbers h1 {
+        font-size: 0.8rem;
+    }
+    
+    .subNumber {
+        font-size: 0.7rem;
+    }
+    .title {
+        padding-top: 0.2rem;
+    }
 }
 
 /* 

@@ -739,6 +739,12 @@ a {
     }
 }
 
+@media only screen and (max-height: 300px){
+    .itemsContainer {
+        transform: translateX(-1rem);
+    }
+}
+
 
 /* * {
     outline: 1px solid #f00 !important;
