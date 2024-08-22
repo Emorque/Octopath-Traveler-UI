@@ -3,7 +3,7 @@ let num = 9;
 
 menuImage.src = "img/bg6.jpg";
 
-imagesArray = ["img/bg1.jpg", "img/bg2.jpg", "img/bg3.jpg", "img/bg4.jpg", "img/bg5.jpg", "img/bg6.jpg", "img/bg7.jpg", "img/bg8.jpg", "img/bg9.jpg", "img/bg10.jpg"];
+imagesArray = ["img/bg1.webp", "img/bg2.webp", "img/bg3.webp", "img/bg4.webp", "img/bg5.webp", "img/bg6.webp", "img/bg7.webp", "img/bg8.webp", "img/bg9.webp", "img/bg10.webp"];
 
 document.addEventListener(`DOMContentLoaded`, imageSwap);
 

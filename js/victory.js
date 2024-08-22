@@ -2,14 +2,19 @@ const button = document.querySelector('.replay');
 const buttonIcon = document.querySelector('.replayTriangle');
 const expBars = document.querySelectorAll('.expBar');
 const totalExp = document.querySelector('.expGain');
+const totalJP = document.querySelector('.jpGain');
+
 
 const shineBars = document.querySelectorAll('.shine');
 
 const characterEXPs = document.querySelectorAll('.characterEXP');
+const characterJPs = document.querySelectorAll('.characterJP');
 
 const gain = parseInt(totalExp.dataset.value);
+const jpGain = parseInt(totalJP.dataset.value);  
 let time1 = gain;
 let time2 = gain;
+let time3 = jpGain;
 const timeInterval = 100;
 
 
@@ -43,6 +48,23 @@ button.addEventListener('click', (event) => {
             time2 -= 1;
             expNum += 1;
             character.innerHTML = String(expNum);
+        }, timeInterval/2);
+    });
+
+    characterJPs.forEach(jp => {
+        time3 = jpGain * 4;
+        let jpNum = parseInt(jp.dataset.value);
+        jp.innerHTML = String(jpNum);
+        let interval3 = setInterval(() => {
+            if (time3 < 0) {
+                clearInterval(interval3);
+            }
+            console.log(time3);
+            time3 -= 1;
+            jpNum += 1;
+            jpString = String(jpNum).substring(0, 1) + ',' + String(jpNum).substring(1, 4);
+            // jpString = jpString.subString(0, 1) + ',' + jpString.subString(1, jpString.length);
+            jp.innerHTML = jpString;
         }, timeInterval/2);
     });
 
