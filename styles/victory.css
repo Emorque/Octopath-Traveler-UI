@@ -530,7 +530,7 @@ a {
 
 .music {
     position: absolute;
-    top:0;
+    /* top:0; */
     left:0;
     z-index: 3;
 }
@@ -753,7 +753,12 @@ a {
         left:0%;
     }
     .music {
-        left: 50%;
+        /* top:0; */
+        bottom: 0%;
+        left: 30%;
+        z-index: 3;
+        height: 70px;
+        width: 40%;
     }
 }
 
