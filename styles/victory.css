@@ -528,6 +528,13 @@ a {
     }
 }
 
+.music {
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 3;
+}
+
 @media only screen and (max-width: 800px){
     .victoryText {
         transform: translate(30px, -40px);
@@ -589,6 +596,10 @@ a {
         /* position: relative; */
         transform: translateY(0px);
     }
+
+    .music {
+        width: 50%;
+    }
 }
 
 @media only screen and (max-width: 720px){
@@ -643,6 +654,10 @@ a {
             width: 0;
             transform: translateX(45vw);
         }
+    }
+    .music {
+        width: 65%;
+        z-index: 1;
     }
 }
 
@@ -736,6 +751,9 @@ a {
     }
     .shine {
         left:0%;
+    }
+    .music {
+        left: 50%;
     }
 }
 

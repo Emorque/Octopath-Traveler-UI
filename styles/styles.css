@@ -152,9 +152,19 @@ span {
     font-size: 0.5rem;
 }
 
+
+.music {
+    position: absolute;
+    top:0;
+    right:0;
+}
+
 @media (max-width: 500px) {
     .title h1 {
         font-size: 3rem; 
+    }
+    .music {
+        width: 65%;
     }
 }
 
