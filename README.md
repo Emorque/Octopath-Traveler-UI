@@ -3,6 +3,9 @@
 This project started with my love for the video game: Octopath Traveler.
 By trying to recreating the UI of this game, it also comes with me learning about UI/UX
 
+## Demo
+<img src="OT_UI_demo.gif">
+
 It can be visited [here](https://emorque.github.io/Octopath-Traveler-UI/)
 
 Even though the original game was made with monitors and TVs in mind, I tried to readjust UI elements for work for mobile devices. I'd love any and all feedback!
